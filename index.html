@@ -74,7 +74,38 @@
             </div>
         </section>
 
-        <hr />
+    
+        <!-- Insert this block directly above your <section id="contact"> -->
+<hr />
+
+<section id="todo-app" aria-labelledby="todo-heading">
+    <h2 id="todo-heading">Interactive Task Manager</h2>
+    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+        Demonstrating advanced DOM manipulation, delegated event listeners, and live state persistence via <code>window.localStorage</code>.
+    </p>
+
+    <div class="todo-container">
+        <!-- Input Form Control -->
+        <form id="todo-form" class="todo-controls-form" aria-label="Add a new task">
+            <div class="todo-input-group">
+                <input type="text" id="todo-input" placeholder="What needs to be done?" required aria-label="New task content">
+                <button type="submit" aria-label="Add item to list">Add Task</button>
+            </div>
+        </form>
+
+        <!-- Dynamic Filter Controls -->
+        <div class="todo-filters" role="group" aria-label="Filter tasks">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <!-- The State-Driven List -->
+        <ul id="todo-list" aria-label="Task List items">
+            <!-- Programmatically injected items via JavaScript go here -->
+        </ul>
+    </div>
+</section>
 
         <section id="contact" aria-labelledby="contact-heading">
             <h2 id="contact-heading">Get in Touch</h2>
